@@ -68,7 +68,7 @@
   { 
     let labels = data.map(item => item.day);
     let values = data.map(item => item.amount);
-    let barColors = ["red", "green","blue","orange","brown"];;
+    let colors = data.map(item => item.color);
     let ctx = document.getElementById("myChart").getContext("2d");
     let myChart = new Chart(ctx, {
       type: "bar",
@@ -76,10 +76,9 @@
         labels: labels,
         datasets: [
           {
-            label: "# of Votes",
+            label: "My Balance",
             data: values,
-            backgroundColor: barColors,
-            borderWidth: 1
+            backgroundColor: colors,
           }
         ]
       },
@@ -87,6 +86,25 @@
         legend: {
           display: false
         },
+        scales: {
+        xAxes: [{
+          barPercentage: 2.5,
+          categoryPercentage: 0.3,
+          gridLines : {
+                drawBorder : false,
+                display : false
+            },
+        }, ],
+        yAxes: [{
+            id: 'y-axis-density',
+            display: false
+          },
+          {
+            id: 'y-axis-gravity',
+            display: false
+          },
+        ],
+      },
         cutoutPercentage: 80
       }
     });
