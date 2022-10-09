@@ -1,7 +1,51 @@
+@font-face {
+  font-family: "DM Sans";
+  src: url("./assets/fonts/DM_Sans/DMSans-Regular.ttf") format("truetype");
+}
+
 .attribution {
-    font-size: 11px;
-    text-align: center;
-  }
-  .attribution a {
-    color: hsl(228, 45%, 44%);
-  }
+  font-size: 11px;
+  text-align: center;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+.bg-softred {
+  background-color: hsl(10, 79%, 65%);
+}
+.text-softred {
+  color: hsl(10, 79%, 65%);
+}
+.bg-cyan {
+  background-color: hsl(186, 34%, 60%);
+}
+.text-cyan {
+  color: hsl(186, 34%, 60%);
+}
+.bg-darkbrown {
+  background-color: hsl(25, 47%, 15%);
+}
+.text-darkbrown {
+  color: hsl(25, 47%, 15%);
+}
+.bg-mediumbrown {
+  background-color: hsl(28, 10%, 53%);
+}
+.text-mediumbrown {
+  color: hsl(28, 10%, 53%);
+}
+.bg-cream {
+  background-color: hsl(27, 66%, 92%);
+}
+.text-cream {
+  color: hsl(27, 66%, 92%);
+}
+.bg-verypaleorange {
+  background-color: hsl(33, 100%, 98%);
+}
+.text-verypaleorange {
+  color: hsl(33, 100%, 98%);
+}
+.dmsans {
+  font-family: "DM Sans", sans-serif;
+}
