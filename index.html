@@ -16,6 +16,7 @@
       integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
       crossorigin="anonymous"
     />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.5.0/Chart.min.js"></script>
     <script
       src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
       integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
@@ -44,6 +45,12 @@
           <img src="./images/logo.svg" alt="budget" class="float-right pt-4" />
         </div>
       </div>
+
+      <div class="row bg-white mt-1 w-75 mx-auto" style="border-radius:1.5rem ;">
+        <div class="col-12">
+          <canvas id="myChart" style="width:100%;max-width:600px"></canvas>
+        </div>
+      </div>
     </div>
 
     <div class="attribution">
@@ -53,5 +60,42 @@
       >. Coded by
       <a href="https://github.com/tinsaye-simeneh">Tinsaye Simeneh</a>.
     </div>
+
+    <script>
+      fetch("./data.JSON")
+.then(res => res.json())
+.then(data => 
+  { 
+    let labels = data.map(item => item.day);
+    let values = data.map(item => item.amount);
+    let barColors = ["red", "green","blue","orange","brown"];;
+    let ctx = document.getElementById("myChart").getContext("2d");
+    let myChart = new Chart(ctx, {
+      type: "bar",
+      data: {
+        labels: labels,
+        datasets: [
+          {
+            label: "# of Votes",
+            data: values,
+            backgroundColor: barColors,
+            borderWidth: 1
+          }
+        ]
+      },
+      options: {
+        legend: {
+          display: false
+        },
+        cutoutPercentage: 80
+      }
+    });
+  }
+)
+    </script>
+  </body>
+      
+      </script>
+
   </body>
 </html>
