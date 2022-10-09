@@ -53,8 +53,14 @@
   width: 40%;
    margin: 0 auto
 }
+.row{
+  width: 75%;
+}
 @media screen and (max-width: 768px) {
     .custom-container {
       width: 100%;
+  }
+  .row{
+    width: 90%;
   }
 }
