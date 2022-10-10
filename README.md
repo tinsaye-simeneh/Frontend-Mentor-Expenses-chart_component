@@ -1,4 +1,4 @@
-# Frontend Mentor - Product preview card component solution
+# Frontend Mentor - Expense Chart Component solution
 
 This is a solution to the Expense Chart Component. Frontend Mentor challenges help you improve your coding skills by building realistic projects. 
 
